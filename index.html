@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1220" />
+  <title>Agile Vibe Programming — Code with empathy. Ship with rhythm.</title>
+  <meta name="description" content="Agile Vibe Programming blends people, process, and predictive AI into a continuously-deploying feedback loop. Code with empathy. Ship with rhythm." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <style>
+    :root {
+      --bg: #0a0f1f;
+      --panel: #0b1220;
+      --card: #0f172a;
+      --muted: #94a3b8;
+      --text: #e5e7eb;
+      --accentA: #7c3aed;
+      --accentB: #06b6d4;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, Liberation Sans, sans-serif; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1120px; margin-inline: auto; padding: 24px; }
+    header { position: sticky; top: 0; backdrop-filter: blur(12px); background: color-mix(in srgb, var(--bg) 86%, transparent); border-bottom: 1px solid #1f2937; z-index: 10; }
+    nav .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: 0.3px; }
+    nav img.logo { width: 150px; height: auto; }
+    nav .links { display: flex; gap: 18px; font-weight: 600; color: var(--muted); }
+    nav .links a:hover { color: #fff; }
+    .hero { position: relative; padding: 96px 24px 72px; background: radial-gradient(1200px 600px at 70% -10%, color-mix(in srgb, var(--accentB) 18%, transparent) 0%, transparent 60%), conic-gradient(from -20deg, color-mix(in srgb, var(--accentA) 12%, transparent), transparent 40%); border-bottom: 1px solid #1f2937; }
+    .hero h1 { font-size: clamp(2rem, 6vw, 4rem); line-height: 1.05; margin: 0 0 16px; }
+    .hero p.lead { font-size: clamp(1.05rem, 2.6vw, 1.35rem); color: var(--muted); max-width: 64ch; }
+    .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 16px; border-radius: 12px; border: 1px solid #243041; background: linear-gradient(135deg, color-mix(in srgb, var(--accentA) 30%, transparent), color-mix(in srgb, var(--accentB) 24%, transparent)); }
+    .btn.secondary { background: var(--panel); }
+    .btn:hover { transform: translateY(-1px); transition: transform 120ms; }
+    .grid { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    section { padding-block: 64px; }
+    .section-title { font-size: clamp(1.4rem, 3.4vw, 2rem); margin-bottom: 16px; }
+    .card { background: var(--card); border: 1px solid #1f2937; border-radius: 16px; padding: 20px; }
+    figure { margin: 0; }
+    figcaption { margin-top: 8px; color: var(--muted); font-size: 0.95rem; }
+    .pill { display: inline-block; padding: 8px 12px; border-radius: 999px; background: linear-gradient(135deg, var(--accentA), var(--accentB)); color: #0b1220; font-weight: 700; font-size: 0.85rem; }
+    .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; background: #0b1220; border: 1px solid #253042; border-radius: 8px; padding: 2px 6px; }
+    .muted { color: var(--muted); }
+    .cols-2 { column-width: 340px; column-gap: 24px; }
+    footer { border-top: 1px solid #1f2937; padding-block: 36px; color: var(--muted); }
+    .list-checks li::marker { content: "✔  "; color: color-mix(in srgb, var(--accentB) 70%, white); }
+    .list-dash li::marker { content: "– "; color: var(--muted);}
+    .lead-quote { font-style: italic; color: var(--muted); border-left: 4px solid color-mix(in srgb, var(--accentA) 50%, var(--accentB) 50%); padding-left: 14px; }
+    @media (prefers-color-scheme: light) {
+      :root { --bg: #f8fafc; --panel: #ffffff; --card: #ffffff; --text: #0f172a; --muted: #475569; }
+      header { background: color-mix(in srgb, white 86%, transparent); }
+      .hero { border-bottom-color: #e2e8f0; }
+      .card { border-color: #e2e8f0; }
+      footer { border-top-color: #e2e8f0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav style="display:flex; align-items:center; justify-content: space-between;">
+        <a class="brand" href="#top" aria-label="Agile Vibe home">
+          <img class="logo" src="assets/logo.svg" alt="Agile Vibe logo" />
+        </a>
+        <div class="links" role="navigation" aria-label="Primary">
+          <a href="#what">What</a>
+          <a href="#principles">Principles</a>
+          <a href="#loop">The Vibe Loop</a>
+          <a href="#adopt">Adopt</a>
+          <a href="#download">Download</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <span class="pill" aria-hidden="true">New</span>
+        <h1>Agile Vibe Programming</h1>
+        <p class="lead">A people‑first, AI‑assisted way to build software that keeps the build green by keeping the people colorful. Code with empathy. Ship with rhythm.</p>
+        <div class="cta">
+          <a class="btn" href="#download" aria-label="Download the Agile Vibe book and posters">⬇ Download</a>
+          <a class="btn secondary" href="#loop" aria-label="Jump to the Vibe Loop">⤵ Explore the Vibe Loop</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="what">
+      <div class="container">
+        <h2 class="section-title">What is Agile Vibe?</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Humans decide, AI suggests</h3>
+            <p>Agile Vibe blends human collaboration with a co‑pilot that offers suggestions, never mandates. Insight nudges and contextual code help reduce toil—while choice stays with the team.</p>
+          </div>
+          <div class="card">
+            <h3>Dual visibility: tech + feelings</h3>
+            <p>Dashboards combine performance signals (latency, errors) and team safety signals (focus‑flow, psychological safety) so you can spot issues in code <em>and</em> culture.</p>
+          </div>
+          <div class="card">
+            <h3>Safe velocity</h3>
+            <p>Feature flags, green‑blue deploys, and intention triggers let you ship often without betting the vibe. Observability closes the loop and makes learning continuous.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="principles">
+      <div class="container">
+        <h2 class="section-title">Core Principles</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Ambient Consent</h3>
+            <p>Collaboration runs on subtle invitations—pairing asks, not assigns; cues that keep flow respectful like a smooth dance floor.</p>
+          </div>
+          <div class="card">
+            <h3>Emotional Refactoring</h3>
+            <p>Conflict is logged and debugged with patience, just like flaky tests. Feelings are first‑class citizens in the process.</p>
+          </div>
+          <div class="card">
+            <h3>Chosen‑Family Dependency Injection</h3>
+            <p>Loose coupling in systems, intentional attachment in teams. Mentorship is opt‑in, multi‑directional, and kind.</p>
+          </div>
+        </div>
+        <p class="lead-quote">“Leave every pull request—and every teammate—better than you found them.”</p>
+      </div>
+    </section>
+
+    <section id="loop">
+      <div class="container">
+        <h2 class="section-title">The Vibe Loop™</h2>
+        <div class="grid" style="align-items: start;">
+          <figure class="card">
+            <img src="assets/vibe-loop.png" alt="Diagram of the Vibe Loop showing People, AI, and Code layers with feedback arrows" loading="lazy" style="width:100%; height:auto; border-radius:12px;" />
+            <figcaption>A bird’s‑eye view of how signals flow across People, AI, and Code to create a continuously‑deploying feedback loop.</figcaption>
+          </figure>
+          <div class="card">
+            <h3>Key Features</h3>
+            <ul class="list-checks">
+              <li><strong>Mood metrics</strong> convert chat reactions into signals for your co‑pilot.</li>
+              <li><strong>Insight nudges</strong> suggest micro‑coaching: pair up, pause, or celebrate.</li>
+              <li><strong>Team vibe dashboard</strong> blends latency and safety at a glance.</li>
+              <li><strong>Decoupled feature flags</strong> keep architecture flexible and people connected.</li>
+              <li><strong>Green‑blue deploy</strong> validates code—and feelings—before primetime.</li>
+            </ul>
+            <p class="muted">Poster available below.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="governance">
+      <div class="container">
+        <h2 class="section-title">Governance Without Gremlins</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>The Vibe‑Limitations Manifesto</h3>
+            <ol class="cols-2">
+              <li><strong>Humans decide, co‑pilot suggests</strong></li>
+              <li><strong>Consent‑first pairing</strong></li>
+              <li><strong>Transparent metrics</strong></li>
+              <li><strong>Weekly Analog Hour</strong></li>
+              <li><strong>Learning budget</strong></li>
+            </ol>
+          </div>
+          <div class="card">
+            <h3>Practical Guardrails</h3>
+            <ul class="list-dash">
+              <li>AI suggestions require human “yes.”</li>
+              <li>Pair invites, never auto‑assignments.</li>
+              <li>Sentiment scrubs names; anonymize by default.</li>
+              <li>Dual‑key for AI‑authored commits.</li>
+              <li>Right‑to‑be‑forgotten for crush‑data and embeddings.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="adopt">
+      <div class="container">
+        <h2 class="section-title">Adopt the Vibe in 3 Steps</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>1) Start with the ritual</h3>
+            <p>Run a weekly <span class="kbd">Analog Hour</span>. Disable AI assistance and ship a tiny feature together—keyboards, tests, and conversation only.</p>
+          </div>
+          <div class="card">
+            <h3>2) Wire the loop</h3>
+            <p>Add a “vibe” panel to your existing dashboard. Pair latency, error rate, and deployment health with a short focus‑flow poll.</p>
+          </div>
+          <div class="card">
+            <h3>3) Guardrail the bots</h3>
+            <p>Enable the governance plugin: cap auto‑fixes, block auto‑reassign, and enforce Analog Hour. Suggestions are welcome; sovereignty stays human.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="download">
+      <div class="container">
+        <h2 class="section-title">Download</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Read the Book</h3>
+            <p>Get the full “Agile Vibe Programming” PDF.</p>
+            <p><a class="btn" href="assets/AgileVibeProgramming.pdf">📘 Download PDF</a></p>
+          </div>
+          <div class="card">
+            <h3>Vibe Loop Poster</h3>
+            <p>Hang the loop in your team space. PNG and SVG included.</p>
+            <p style="display:flex; gap:8px; flex-wrap: wrap;">
+              <a class="btn secondary" href="assets/vibe-loop.svg" download>📐 SVG</a>
+              <a class='btn secondary' href='assets/vibe-loop.png' download>🖼️ PNG</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex; flex-wrap: wrap; align-items:center; justify-content: space-between; gap:12px;">
+        <p>© 2025 Agile Vibe. Built with empathy.</p>
+        <p><a href="mailto:hello@agilevibe.org" aria-label="Email">hello@agilevibe.org</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
